@@ -27,7 +27,7 @@ dailyPhotos = function() {
 
 <style>
 p {
-    font-weight: normal;
+    font-weight: bold;
     font-family: cursive;
     color: white;
 }
@@ -227,13 +227,13 @@ if(((month+1)-1)<=0){
     seconds = today.getSeconds();
     console.log(Notification.permission);
     if (Notification.permission == "granted"){
-        if(hours==23 && minutes==58 && seconds==0){
+        if(hours==14 && minutes==00 && seconds==0){
             showNotification();
         }
     } else if (Notification.permission != "denied"){
         Notification.requestPermission().then(permission => {
             if(permission == "granted"){
-                if(hours==23 && minutes==58 && seconds==0){
+                if(hours==14 && minutes==00 && seconds==0){
                     showNotification();
                 }
             }
