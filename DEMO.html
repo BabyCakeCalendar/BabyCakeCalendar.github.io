@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photos</title>
+<script type="text/javascript">
+var dailyPhotos;
+var today, img;
+
+dailyPhotos = function() {
+
+   today = new Date();
+   day = today.getDate();
+   showImages = [ ];
+   myPhotos = [ "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg", "17.jpg", "18.jpg", "19.jpg", "20.jpg", "21.jpg", "22.png", "23.png", "24.jpg", "25.jpg", "26.jpg", "27.jpg", "28.jpg", "29.jpg", "30.jpg", "31.jpg"]; // You must specify the path or file name of your images that will be loaded in a weekday basis.
+
+    if ( document.images ) {
+       for ( var x = 0; x < myPhotos.length; x++ ) { 
+       showImages[ x ] = new Image();
+       showImages[ x ].src = myPhotos[ x ];          
+     } img = (( document.getElementById ) ? document.getElementById("yourImageId") : document.images.yourImageId ); // Specify the id of the image that will get raplaced daily.
+        img.src = showImages[ day - 1 ].src;
+        img.alt = myPhotos[ day - 1 ];         
+   } return false; // If the browser can't display images, then EXIT FUNCTION.
+};
+   window.onload = dailyPhotos;
+</script>
+
+<style>
+p {
+    font-weight: normal;
+    font-family: cursive;
+    color: white;
+}
+h1 {
+    font-weight: bold;
+    font-family: cursive;
+    color: white;
+}
+img {
+    width : 200px;
+    height: auto;
+    border: 5px solid white;
+}
+</style>
+</head>
+<body bgcolor='#ffc1cc'>
+<h1>Welcome to the Baby Cake Calendar</h1>
+<div id="main">
+<img id="yourImageId" src="2.jpg" alt="DEMO" />
+</div>
+<p id="change">Date Undefined</p>
+<p id="eventYear">One Year ago today: We had a usual silly day :D</p>
+<p id="event10Mo">Ten Months ago today: We had a usual silly day :D</p>
+<p id="event8Mo">Eight Months ago today: We had a usual silly day :D</p>
+<p id="event6Mo">Six Months ago today: We had a usual silly day :D</p>
+<p id="event4Mo">Four Months ago today: We had a usual silly day :D</p>
+<p id="event2Mo">Two Months ago today: We had a usual silly day :D</p>
+<p id="event1Mo">One Month ago today: We had a usual silly day :D</p>
+
+<script>
+var newevents = Array.from(Array(14), () => new Array(4));
+newevents[0][0] = "test";
+/*
+Tests
+newevents[8][29] = "We did something 1 Year ago";
+newevents[7][29] = "We did something 1 Month ago";
+newevents[6][29] = "We did something 2 Months ago";
+newevents[4][29] = "We did something 4 Months ago";
+newevents[2][29] = "We did something 6 Months ago";
+newevents[12][29] = "We did something 8 Months ago";
+newevents[10][29] = "We did something 10 Months ago";
+*/
+newevents[8][29] = "HAPPY BIRTHDAY BABY CAKE!";
+newevents[8][5] = "Went to BOXPARK Croydon and had an overpriced cocktail slush and went to the breakfast club and had blueberry pancakes";
+newevents[8][4] = "We played the zoom in photo game on text";
+newevents[8][2] = "We went to IKEA Croydon and baby bought me the buggle";
+newevents[7][29] = "BABY&apos;S ONE MONTH BIRTHDAY-VERSARY";
+newevents[7][28] = "Baby showed me the flappy on bed fish dance";
+newevents[7][27] = "We went to the Alley with Loois and got the taro drink";
+newevents[7][25] = "We celebrated baby&apos;s BIRTHDAY and went to our first hotel together then went to get Steak and Chips (two servings each) and I had a really really really nice time with buggle - I&apos;m writing this before baby&apos;s birthday so I hope baby has an equally nice birthday";
+newevents[7][8] = "We played our first game of Portal 2 together - baby wore groovy gamer headphones";
+newevents[7][7] = "We had FROYO and met up in Westfield London and hung out a lot in escalators";
+newevents[7][6] = "Baby&apos;s first time in BROMLEY, we went to the cinema to watch Cruella - was very dark with funny bits but very fun with baby";
+newevents[7][4] = "Baby had a bap";
+newevents[7][2] = "We left Heronbank Flat 139 - baby was in room 3, I was in room 7 and it was special because it was our meeting place";
+newevents[7][1] = "Michael Westthorp&apos;s Birthday but me and baby went to Las Iguanas and Nilavan and Emily probably still haven&apos;t paid you back - solid bef";
+newevents[6][30] = "We made bubble tea (or as I would like to call it now - buggle tea) and a cake which we biffed slightly but recovered";
+newevents[6][29] = "We went to laser tag with Loois, Nilavan and Emily - we did the most shooting though cause we&apos;re boss boss. Also baby took baby&apos;s gun so we had double guns and baby took both guns and turned a corner and got everyone like a double gunned killing machine";
+newevents[6][28] = "Baby made ramen for baby and worse Newcastle shirt";
+newevents[6][27] = "We went to the Korean bbq in Coventry and baby wore her red dress";
+newevents[6][26] = "We all went out to Nando&apos;s";
+newevents[6][24] = "We went shopping in big Cov and had our receipt idea for call for code. We also went to The Botanist and had Five Guys";
+newevents[6][22] = "We all went out to have a meal at The Giggling Squid";
+newevents[6][20] = "Baby bought me baby Yoda - baby yoda baby baby yoda";
+newevents[6][18] = "We watched one of the England Euro 2020 (postponed to 2021) games";
+newevents[6][17] = "Baby got her angel charger";
+newevents[6][14] = "We hosted our bbq but as soon as we left it it burnt down - sure better bbqs to come";
+newevents[6][13] = "We went ice skating";
+newevents[6][11] = "We got our first Pfizer COVID Vaccination";
+newevents[6][8] = "We had our picnic on the science park and got kicked off but only after we&apos;d had a lot a lot of fun";
+newevents[6][3] = "We had to self isolate :(";
+newevents[6][1] = "Baby made Onigiri";
+newevents[5][23] = "We made our first Roast Dinner just us two together";
+newevents[5][20] = "Baby put top half of a pineapple on head so looked like a pineapple";
+newevents[5][18] = "We went out to Leamington Spa and got Creams";
+newevents[5][16] = "OUR 6 MONTH ANNIVERSARY";
+newevents[5][13] = "We got our air forces";
+newevents[5][11] = "Baby made me udon with soy sauce really really nice";
+newevents[5][6] = "We got Nando&apos;s for lunchies";
+newevents[5][1] = "I made a Pokémon Go account to impress baby&apos;s dad";
+newevents[4][25] = "We arrived back to Heronbank for Summer Term";
+newevents[4][14] = "The start of Google Meets while revising";
+newevents[4][13] = "We met up and went to the Canary Wharf Asian Supermarket and had a picnic in the park/ green";
+newevents[4][10] = "Baby got her Kirby earrings";
+newevents[3][24] = "The origin of the raspberry pie and intel Pentium 4 joke";
+newevents[3][19] = "Baby got her apple watch and wore her apple watch and my apple watch on one hand :O";
+newevents[3][17] = "Baby wore baby grey checked, now sleeping, shirt";
+newevents[3][11] = "Baby got scared when baby came into the room and silly caught it on camera";
+newevents[3][3] = "We got ice cream from the ice cream van";
+newevents[3][1] = "Baby balanced food on nose";
+newevents[2][26] = "Baby wore babys big roadman jacket and silly wore babys pink top";
+newevents[2][16] = "We made bacon pancakes";
+newevents[2][14] = "VALENTINES DAY - Baby bought baby chocolates and we moved back into Heronbank";
+newevents[1][19] = "Baby drew stick figure baby holding silly in checked pyjamas";
+newevents[1][1] = "HAPPY NEW YEAR! - We did cheeky stuff to start the year...";
+newevents[1][31] = "New Years Eve! - Silly was in NEWCASTLE though :( - Looking forward to next year years Eve";
+newevents[12][29] = "Silly built a snowman";
+newevents[12][25] = "MERRY CHRISTMAS! - We both had big Christmas Dinners";
+newevents[12][20] = "We got our covid tests ready to go home for the christmas break";
+newevents[12][15] = "I went to Bob Bob Ricard with my Mum and Dad";
+newevents[12][4] = "We took a christmasy photo with the Warwick Christmas tree after baby picked me up from my lecture";
+newevents[12][3] = "We had the Heronbank Flat 139 Christmas Dinner";
+newevents[11][29] = "We took silly photos in a warwick Car Park";
+newevents[11][28] = "We got a Flat Christmas tree";
+newevents[11][26] = "We made Ramdon - it was very tasty";
+newevents[11][24] = "We took silly photos with our Supreme Hoodie";
+newevents[11][16] = "OUR ANNIVERSARY MOST SPECKAL DAY :D";
+
+var date = (new Date()).getDate();
+var month = (new Date()).getMonth();
+var todaysDate = (new Date()).toDateString();
+document.getElementById("change").innerHTML = 'Today is ' + todaysDate;
+
+//1 Year:
+if(newevents[month+1][date] != undefined){
+    document.getElementById("eventYear").innerHTML = 'One Year ago today: ' + newevents[month+1][date];
+}
+
+//10 Months:
+if(((month+1)-10)<=0){
+    if(newevents[(12 - (10-(month+1)))][date] != undefined){
+        document.getElementById("event10Mo").innerHTML = 'Ten Months ago today: ' + newevents[(12 - (10-(month+1)))][date];
+    }
+}else{
+    if(newevents[(month+1)-10][date] != undefined){
+        document.getElementById("event10Mo").innerHTML = 'Ten Months ago today: ' + newevents[(month+1)-10][date];
+    }
+}
+
+//8 Months:
+if(((month+1)-8)<=0){
+    if(newevents[(12 - (8-(month+1)))][date] != undefined){
+        document.getElementById("event8Mo").innerHTML = 'Eight Months ago today: ' + newevents[(12 - (8-(month+1)))][date];
+    }
+}else{
+    if(newevents[(month+1)-8][date] != undefined){
+        document.getElementById("event8Mo").innerHTML = 'Eight Months ago today: ' + newevents[(month+1)-8][date];
+    }
+}
+
+//6 Months:
+if(((month+1)-6)<=0){
+    if(newevents[(12 - (6-(month+1)))][date] != undefined){
+        document.getElementById("event6Mo").innerHTML = 'Six Months ago today: ' + newevents[(12 - (6-(month+1)))][date];
+    }
+}else{
+    if(newevents[(month+1)-6][date] != undefined){
+        document.getElementById("event6Mo").innerHTML = 'Six Months ago today: ' + newevents[(month+1)-6][date];
+    }
+}
+
+//4 Months:
+if(((month+1)-4)<=0){
+    if(newevents[(12 - (4-(month+1)))][date] != undefined){
+        document.getElementById("event4Mo").innerHTML = 'Four Months ago today: ' + newevents[(12 - (4-(month+1)))][date];
+    }
+}else{
+    if(newevents[(month+1)-4][date] != undefined){
+        document.getElementById("event4Mo").innerHTML = 'Four Months ago today: ' + newevents[(month+1)-4][date];
+    }
+}
+
+//2 Months:
+if(((month+1)-2)<=0){
+    if(newevents[(12 - (2-(month+1)))][date] != undefined){
+        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents[(12 - (2-(month+1)))][date];
+    }
+}else{
+    if(newevents[(month+1)-2][date] != undefined){
+        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents[(month+1)-2][date];
+    }
+}
+
+//1 Month:
+if(((month+1)-1)<=0){
+    if(newevents[(12 - (1-(month+1)))][date] != undefined){
+        document.getElementById("event1Mo").innerHTML = 'One Month ago today: ' + newevents[(12 - (1-(month+1)))][date];
+    }
+}else{
+    if(newevents[(month+1)-1][date] != undefined){
+        document.getElementById("event1Mo").innerHTML = 'One Month ago today: ' + newevents[(month+1)-1][date];
+    }
+}
+
+</script>
+
+<script>
+//Notifications:
+    function showNotification(){
+        const notification = new Notification("New Message", {
+            body: "Hello there!"
+        });
+    }
+    today = new Date();
+    hours = today.getHours();
+    minutes = today.getMinutes();
+    seconds = today.getSeconds();
+    console.log(Notification.permission);
+    if (Notification.permission == "granted"){
+        if(hours==14 && minutes==0 && seconds==0){
+            showNotification();
+        }
+    } else if (Notification.permission != "denied"){
+        Notification.requestPermission().then(permission => {
+            if(permission == "granted"){
+                if(hours==14 && minutes==0 && seconds==0){
+                    showNotification();
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

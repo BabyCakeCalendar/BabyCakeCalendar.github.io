@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-color: #ffc1cc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button{
+    background-color: #ffc1cc;
+    border: 2px solid #ffb7c5;
+    color: white;
+    text-align: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #ffb6c1;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="happy_birthday.jpg" alt="Avatar" style="width:400px;height:400px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Happy Birthday Baby Cake!</h1> 
+      <p>Thank you for being with me through everything in our life so far and I cannot wait to spend forever with you. You have helped me through my revision this summer, you've helped me through my life so far, through the best times and the hardest times - thank you for being mine and letting me be yours. I love you 9000 now and forever and hope that you have the bestest surprise birthday that you could ever wish for.</p> 
+      <p>Love from your silliest monkey, your cheekiest monkey, your longest monkey and your rainbow happy monkey. Love from your monkey family.</p>
+      <button class="button" onclick="document.location='DEMO.html'">Click here for present</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
