@@ -41,6 +41,12 @@ img {
     height: auto;
     border: 5px solid white;
 }
+.button{
+    background-color: #ffc1cc;
+    border: 2px solid #ffb7c5;
+    color: white;
+    text-align: center;
+}
 </style>
 </head>
 <body bgcolor='#ffc1cc'>
@@ -57,6 +63,7 @@ img {
 <p id="event2Mo">Two Months ago today: We had a usual silly day :D</p>
 <p id="event1Mo">One Month ago today: We had a usual silly day :D</p>
 
+<button class="button" onclick="document.location='messages.html'">Click here for a Message from Freb</button>
 <script>
 var newevents = Array.from(Array(14), () => new Array(4));
 newevents[0][0] = "test";
