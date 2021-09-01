@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photos</title>
+  
+<style>
+p {
+    font-weight: normal;
+    font-family: cursive;
+    color: white;
+}
+h1 {
+    font-weight: bold;
+    font-family: cursive;
+    color: white;
+}
+img {
+    width : 200px;
+    height: auto;
+    border: 5px solid white;
+}
+</style>
+</head>
+<body bgcolor='#ffc1cc'>
+
+<p id="message">Sample</p>
+
+<script>
+newevents = [];
+newevents[0] = "I love you 9000 Baby cake";
+newevents[1] = "You make me the happiest man on earth";
+newevents[2] = "I love you my buggle potato";
+newevents[3] = "Buggle=You and Buggle=Me";
+newevents[4] = "I am so proud of you baby cake";
+newevents[5] = "I love it when you say something really silly and it makes me laugh uncontrollably";
+newevents[6] = "MONKEY MONKEY MONKEY MONKEY";
+newevents[7] = "My silliest supportive sprogget";
+newevents[8] = "Remember when you did the log poo";
+newevents[9] = "Remember the log poo story";
+newevents[10] = "Remember when Milo climbed on Daddys head";
+newevents[11] = "Remember when we first kissed";
+newevents[12] = "Remember when we started the scrapbook";
+newevents[13] = "Remember when you first cooked me the udon soy sauce beef dish";
+newevents[14] = "Remember when we first made ramen from the packet";
+newevents[15] = "Remember when we first said I love you";
+newevents[16] = "Remember when we first called each other silly potato and silly pie";
+newevents[17] = "Remember when we got Arlo";
+newevents[18] = "Remember when we got Ari";
+newevents[19] = "Remember when we got Milo";
+
+document.getElementById("message").innerHTML = newevents[Math.floor(Math.random() * 20)];
+
+</script>
+
+</body>
+</html>
