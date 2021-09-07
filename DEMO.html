@@ -251,8 +251,8 @@ if(((month+1)-1)<=0){
 <h2 style="color:white">Time until baby needs to take medicine</h2>
 <p id="demo"></p>
 
-<label for="myCheck">Has baby taken medicine?</label> 
-<input style="display:none" type="checkbox" id="myCheck" onclick="myFunction()">
+<label for="myCheck" id="labelCheck" style="color:white">Has baby taken medicine?</label> 
+<input style="display:none;color:white" type="checkbox" id="myCheck" onclick="myFunction()">
 
 <p id="text" style="display:none">Mmmmmm Yummy Medicine!</p>
 
@@ -261,9 +261,11 @@ function myFunction() {
   var checkBox = document.getElementById("myCheck");
   var text = document.getElementById("text");
   var x = document.getElementById("myCheck");
+  var y = document.getElementById("labelCheck");
   if (checkBox.checked == true){
     text.style.display = "block";
     x.style.display = "none";
+    y.style.display = "none";
   } else {
      text.style.display = "none";
   }
@@ -277,7 +279,8 @@ var countDownDate = new Date("Sep " + dateToday + ", 2021 14:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
-
+  dateToday = (new Date()).getDate();
+  countDownDate = new Date("Sep " + dateToday + ", 2021 14:00:00").getTime();
   // Get today's date and time
   var now = new Date().getTime();
 
@@ -288,6 +291,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     dateToday = dateToday + 1;
     countDownDate = new Date("Sep " + dateToday + ", 2021 14:00:00").getTime();
+    distance = countDownDate - now;
     var x = document.getElementById("myCheck");
     x.style.display = "block";
   }
