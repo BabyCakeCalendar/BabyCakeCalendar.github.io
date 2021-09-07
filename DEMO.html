@@ -248,7 +248,25 @@ if(((month+1)-1)<=0){
     }
 </script>
 
+<h2>Time until baby needs to take medicine...</h2>
 <p id="demo"></p>
+
+<label for="myCheck">Has baby taken medicine?</label> 
+<input style="display:none" type="checkbox" id="myCheck" onclick="myFunction()">
+
+<p id="text" style="display:none">Mmmmmm Yummy Medicine!</p>
+
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
 
 <script>
 // Set the date we're counting down to
@@ -268,17 +286,16 @@ var x = setInterval(function() {
   if (distance < 0) {
     dateToday = dateToday + 1;
     countDownDate = new Date("Sep " + dateToday + ", 2021 14:00:00").getTime();
+    var x = document.getElementById("myCheck");
+    x.style.display = "block";
   }
-  
   // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
    
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("demo").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
    
 }, 1000);
 </script>
