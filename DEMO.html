@@ -248,7 +248,7 @@ if(((month+1)-1)<=0){
     }
 </script>
 
-<h2>Time until baby needs to take medicine...</h2>
+<h2 style="color:white">Time until baby needs to take medicine</h2>
 <p id="demo"></p>
 
 <label for="myCheck">Has baby taken medicine?</label> 
@@ -260,8 +260,10 @@ if(((month+1)-1)<=0){
 function myFunction() {
   var checkBox = document.getElementById("myCheck");
   var text = document.getElementById("text");
+  var x = document.getElementById("myCheck");
   if (checkBox.checked == true){
     text.style.display = "block";
+    x.style.display = "none";
   } else {
      text.style.display = "none";
   }
