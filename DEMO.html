@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>V3 Baby Cake Calendar</title>
+<title>TESTING PHASE Baby Cake Calendar</title>
 <script type="text/javascript">
 var dailyPhotos;
 var today, img;
@@ -79,15 +79,15 @@ var newevents22 = Array.from(Array(14), () => new Array(4));
 newevents21[0][0] = "test";
 /*
 Tests
-newevents21[8][29] = "We did something 1 Year ago";
-newevents21[7][29] = "We did something 1 Month ago";
-newevents21[6][29] = "We did something 2 Months ago";
-newevents21[4][29] = "We did something 4 Months ago";
-newevents21[2][29] = "We did something 6 Months ago";
-newevents21[12][29] = "We did something 8 Months ago";
-newevents21[10][29] = "We did something 10 Months ago";
+newevents21[4][17] = "We did something 1 Year ago";
+newevents21[3][17] = "We did something 1 year and 1 Month ago";
+newevents21[2][17] = "We did something 1 year and 2 Months ago";
+newevents21[12][17] = "We did something 4 Months ago";
+newevents21[10][17] = "We did something 6 Months ago";
+newevents21[8][17] = "We did something 8 Months ago";
+newevents21[6][17] = "We did something 10 Months ago";
 */
-newevents21[4][17] = "HELLOOOOOOOOOOO";
+
 newevents21[8][29] = "HAPPY BIRTHDAY BABY CAKE!";
 newevents21[8][5] = "Went to BOXPARK Croydon and had an overpriced cocktail slush and went to the breakfast club and had blueberry pancakes";
 newevents21[8][4] = "We played the zoom in photo game on text";
@@ -158,8 +158,7 @@ var date = (new Date()).getDate();
 var month = (new Date()).getMonth();
 var year = (new Date()).getFullYear();
 var todaysDate = (new Date()).toDateString();
-document.getElementById("change").innerHTML = 'Today is ' + newevents21[4][17];
-//todaysDate
+document.getElementById("change").innerHTML = 'Today is ' + todaysDate;
 
 //NEW LOGIC:
 //Assumes viewing in 2022...
