@@ -75,6 +75,7 @@ button{
 <script>
 var newevents20 = Array.from(Array(14), () => new Array(4));
 var newevents21 = Array.from(Array(14), () => new Array(4));
+var newevents22 = Array.from(Array(14), () => new Array(4));
 newevents21[0][0] = "test";
 /*
 Tests
@@ -200,23 +201,23 @@ if(((month+1)-1)<=0){
 // 2 Months:
 if(((month+1)-2)<=0){
     if(newevents21[(12 - (2-(month+1)))][date] != undefined && newevents20[(12 - (2-(month+1)))][date] == undefined){
-        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents21[(12 - (1-(month+1)))][date] + ', One Year and Two Months ago today: We had a usual silly day :D';
+        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents21[(12 - (2-(month+1)))][date] + ', One Year and Two Months ago today: We had a usual silly day :D';
     }
     if(newevents21[(12 - (2-(month+1)))][date] != undefined && newevents20[(12 - (2-(month+1)))][date] != undefined){
-        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents21[(12 - (1-(month+1)))][date] + ', One Year and Two Months ago today: ' + newevents20[(12 - (1-(month+1)))][date];
+        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents21[(12 - (2-(month+1)))][date] + ', One Year and Two Months ago today: ' + newevents20[(12 - (2-(month+1)))][date];
     }
     if(newevents21[(12 - (2-(month+1)))][date] == undefined && newevents20[(12 - (2-(month+1)))][date] != undefined){
-        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: We had a usual silly day :D' + ', One Year and Two Months ago today: ' + newevents20[(12 - (1-(month+1)))][date];
+        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: We had a usual silly day :D' + ', One Year and Two Months ago today: ' + newevents20[(12 - (2-(month+1)))][date];
     }
 }else{
     if(newevents22[(month+1)-2][date] != undefined && newevents21[(month+1)-2][date] == undefined){
-        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents22[(month+1)-1][date] + ', One Year and Two Months ago today: We had a usual silly day :D';
+        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents22[(month+1)-2][date] + ', One Year and Two Months ago today: We had a usual silly day :D';
     }
     if(newevents22[(month+1)-2][date] != undefined && newevents21[(month+1)-2][date] != undefined){
-        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents22[(month+1)-1][date] + ', One Year and Two Months ago today: ' + newevents21[(month+1)-1][date];
+        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents22[(month+1)-2][date] + ', One Year and Two Months ago today: ' + newevents21[(month+1)-2][date];
     }
     if(newevents22[(month+1)-2][date] == undefined && newevents21[(month+1)-2][date] != undefined){
-        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: We had a usual silly day :D' + ', One Year and Two Months ago today: ' + newevents21[(month+1)-1][date];
+        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: We had a usual silly day :D' + ', One Year and Two Months ago today: ' + newevents21[(month+1)-2][date];
     }
 }
 
@@ -230,98 +231,105 @@ second = ", One Year and Four Months ago today: ";
 silly = ", One Year and Four Months ago today: We had a usual silly day :D";
 if(((month+1)-4)<=0){
     if(newevents21[(12 - (4-(month+1)))][date] != undefined && newevents20[(12 - (4-(month+1)))][date] == undefined){
-        document.getElementById("event4Mo").innerHTML = first + newevents21[(12 - (1-(month+1)))][date] + silly;
+        document.getElementById("event4Mo").innerHTML = first + newevents21[(12 - (4-(month+1)))][date] + silly;
     }
     if(newevents21[(12 - (4-(month+1)))][date] != undefined && newevents20[(12 - (4-(month+1)))][date] != undefined){
-        document.getElementById("event4Mo").innerHTML = first + newevents21[(12 - (1-(month+1)))][date] + second + newevents20[(12 - (1-(month+1)))][date];
+        document.getElementById("event4Mo").innerHTML = first + newevents21[(12 - (4-(month+1)))][date] + second + newevents20[(12 - (4-(month+1)))][date];
     }
     if(newevents21[(12 - (4-(month+1)))][date] == undefined && newevents20[(12 - (4-(month+1)))][date] != undefined){
-        document.getElementById("event4Mo").innerHTML = silly + second + newevents20[(12 - (1-(month+1)))][date];
+        document.getElementById("event4Mo").innerHTML = silly + second + newevents20[(12 - (4-(month+1)))][date];
     }
 }else{
     if(newevents22[(month+1)-4][date] != undefined && newevents21[(month+1)-4][date] == undefined){
-        document.getElementById("event4Mo").innerHTML = first + newevents22[(month+1)-1][date] + silly;
+        document.getElementById("event4Mo").innerHTML = first + newevents22[(month+1)-4][date] + silly;
     }
     if(newevents22[(month+1)-4][date] != undefined && newevents21[(month+1)-4][date] != undefined){
-        document.getElementById("event4Mo").innerHTML = first + newevents22[(month+1)-1][date] + second + newevents21[(month+1)-1][date];
+        document.getElementById("event4Mo").innerHTML = first + newevents22[(month+1)-4][date] + second + newevents21[(month+1)-1][date];
     }
     if(newevents22[(month+1)-4][date] == undefined && newevents21[(month+1)-4][date] != undefined){
-        document.getElementById("event4Mo").innerHTML = silly + second + newevents21[(month+1)-1][date];
+        document.getElementById("event4Mo").innerHTML = silly + second + newevents21[(month+1)-4][date];
+    }
+}
+   
+// 6 Months:
+first = "Six Months ago today: ";
+second = ", One Year and Six Months ago today: ";
+silly = ", One Year and Six Months ago today: We had a usual silly day :D";
+if(((month+1)-6)<=0){
+    if(newevents21[(12 - (6-(month+1)))][date] != undefined && newevents20[(12 - (6-(month+1)))][date] == undefined){
+        document.getElementById("event6Mo").innerHTML = first + newevents21[(12 - (6-(month+1)))][date] + silly;
+    }
+    if(newevents21[(12 - (6-(month+1)))][date] != undefined && newevents20[(12 - (6-(month+1)))][date] != undefined){
+        document.getElementById("event6Mo").innerHTML = first + newevents21[(12 - (6-(month+1)))][date] + second + newevents20[(12 - (6-(month+1)))][date];
+    }
+    if(newevents21[(12 - (6-(month+1)))][date] == undefined && newevents20[(12 - (6-(month+1)))][date] != undefined){
+        document.getElementById("event6Mo").innerHTML = silly + second + newevents20[(12 - (6-(month+1)))][date];
+    }
+}else{
+    if(newevents22[(month+1)-6][date] != undefined && newevents21[(month+1)-6][date] == undefined){
+        document.getElementById("event6Mo").innerHTML = first + newevents22[(month+1)-6][date] + silly;
+    }
+    if(newevents22[(month+1)-6][date] != undefined && newevents21[(month+1)-6][date] != undefined){
+        document.getElementById("event6Mo").innerHTML = first + newevents22[(month+1)-6][date] + second + newevents21[(month+1)-6][date];
+    }
+    if(newevents22[(month+1)-6][date] == undefined && newevents21[(month+1)-6][date] != undefined){
+        document.getElementById("event6Mo").innerHTML = silly + second + newevents21[(month+1)-6][date];
+    }
+}
+   
+// 8 Months:
+first = "Eight Months ago today: ";
+second = ", One Year and Eight Months ago today: ";
+silly = ", One Year and Eight Months ago today: We had a usual silly day :D";
+if(((month+1)-8)<=0){
+    if(newevents21[(12 - (8-(month+1)))][date] != undefined && newevents20[(12 - (8-(month+1)))][date] == undefined){
+        document.getElementById("event8Mo").innerHTML = first + newevents21[(12 - (8-(month+1)))][date] + silly;
+    }
+    if(newevents21[(12 - (8-(month+1)))][date] != undefined && newevents20[(12 - (8-(month+1)))][date] != undefined){
+        document.getElementById("event8Mo").innerHTML = first + newevents21[(12 - (8-(month+1)))][date] + second + newevents20[(12 - (8-(month+1)))][date];
+    }
+    if(newevents21[(12 - (8-(month+1)))][date] == undefined && newevents20[(12 - (8-(month+1)))][date] != undefined){
+        document.getElementById("event8Mo").innerHTML = silly + second + newevents20[(12 - (8-(month+1)))][date];
+    }
+}else{
+    if(newevents22[(month+1)-8][date] != undefined && newevents21[(month+1)-8][date] == undefined){
+        document.getElementById("event8Mo").innerHTML = first + newevents22[(month+1)-8][date] + silly;
+    }
+    if(newevents22[(month+1)-8][date] != undefined && newevents21[(month+1)-8][date] != undefined){
+        document.getElementById("event8Mo").innerHTML = first + newevents22[(month+1)-8][date] + second + newevents21[(month+1)-8][date];
+    }
+    if(newevents22[(month+1)-8][date] == undefined && newevents21[(month+1)-8][date] != undefined){
+        document.getElementById("event8Mo").innerHTML = silly + second + newevents21[(month+1)-8][date];
+    }
+}
+   
+// 10 Months:
+first = "Ten Months ago today: ";
+second = ", One Year and Ten Months ago today: ";
+silly = ", One Year and Ten Months ago today: We had a usual silly day :D";
+if(((month+1)-10)<=0){
+    if(newevents21[(12 - (10-(month+1)))][date] != undefined && newevents20[(12 - (10-(month+1)))][date] == undefined){
+        document.getElementById("event10Mo").innerHTML = first + newevents21[(12 - (10-(month+1)))][date] + silly;
+    }
+    if(newevents21[(12 - (10-(month+1)))][date] != undefined && newevents20[(12 - (10-(month+1)))][date] != undefined){
+        document.getElementById("event10Mo").innerHTML = first + newevents21[(12 - (10-(month+1)))][date] + second + newevents20[(12 - (10-(month+1)))][date];
+    }
+    if(newevents21[(12 - (10-(month+1)))][date] == undefined && newevents20[(12 - (10-(month+1)))][date] != undefined){
+        document.getElementById("event10Mo").innerHTML = silly + second + newevents20[(12 - (10-(month+1)))][date];
+    }
+}else{
+    if(newevents22[(month+1)-10][date] != undefined && newevents21[(month+1)-10][date] == undefined){
+        document.getElementById("event10Mo").innerHTML = first + newevents22[(month+1)-10][date] + silly;
+    }
+    if(newevents22[(month+1)-10][date] != undefined && newevents21[(month+1)-10][date] != undefined){
+        document.getElementById("event10Mo").innerHTML = first + newevents22[(month+1)-10][date] + second + newevents21[(month+1)-10][date];
+    }
+    if(newevents22[(month+1)-10][date] == undefined && newevents21[(month+1)-10][date] != undefined){
+        document.getElementById("event10Mo").innerHTML = silly + second + newevents21[(month+1)-10][date];
     }
 }
    
 //OLD LOGIC:
-
-//1 Year:
-if(newevents21[month+1][date] != undefined){
-    document.getElementById("eventYear").innerHTML = 'One Year ago today: ' + newevents21[month+1][date];
-}
-
-//10 Months:
-if(((month+1)-10)<=0){
-    if(newevents21[(12 - (10-(month+1)))][date] != undefined){
-        document.getElementById("event10Mo").innerHTML = 'Ten Months ago today: ' + newevents21[(12 - (10-(month+1)))][date];
-    }
-}else{
-    if(newevents21[(month+1)-10][date] != undefined){
-        document.getElementById("event10Mo").innerHTML = 'Ten Months ago today: ' + newevents21[(month+1)-10][date];
-    }
-}
-
-//8 Months:
-if(((month+1)-8)<=0){
-    if(newevents21[(12 - (8-(month+1)))][date] != undefined){
-        document.getElementById("event8Mo").innerHTML = 'Eight Months ago today: ' + newevents21[(12 - (8-(month+1)))][date];
-    }
-}else{
-    if(newevents21[(month+1)-8][date] != undefined){
-        document.getElementById("event8Mo").innerHTML = 'Eight Months ago today: ' + newevents21[(month+1)-8][date];
-    }
-}
-
-//6 Months:
-if(((month+1)-6)<=0){
-    if(newevents21[(12 - (6-(month+1)))][date] != undefined){
-        document.getElementById("event6Mo").innerHTML = 'Six Months ago today: ' + newevents21[(12 - (6-(month+1)))][date];
-    }
-}else{
-    if(newevents21[(month+1)-6][date] != undefined){
-        document.getElementById("event6Mo").innerHTML = 'Six Months ago today: ' + newevents21[(month+1)-6][date];
-    }
-}
-
-//4 Months:
-if(((month+1)-4)<=0){
-    if(newevents21[(12 - (4-(month+1)))][date] != undefined){
-        document.getElementById("event4Mo").innerHTML = 'Four Months ago today: ' + newevents21[(12 - (4-(month+1)))][date];
-    }
-}else{
-    if(newevents21[(month+1)-4][date] != undefined){
-        document.getElementById("event4Mo").innerHTML = 'Four Months ago today: ' + newevents21[(month+1)-4][date];
-    }
-}
-
-//2 Months:
-if(((month+1)-2)<=0){
-    if(newevents21[(12 - (2-(month+1)))][date] != undefined){
-        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents21[(12 - (2-(month+1)))][date];
-    }
-}else{
-    if(newevents21[(month+1)-2][date] != undefined){
-        document.getElementById("event2Mo").innerHTML = 'Two Months ago today: ' + newevents21[(month+1)-2][date];
-    }
-}
-
-//1 Month:
-if(((month+1)-1)<=0){
-    if(newevents21[(12 - (1-(month+1)))][date] != undefined){
-        document.getElementById("event1Mo").innerHTML = 'One Month ago today: ' + newevents21[(12 - (1-(month+1)))][date];
-    }
-}else{
-    if(newevents21[(month+1)-1][date] != undefined){
-        document.getElementById("event1Mo").innerHTML = 'One Month ago today: ' + newevents21[(month+1)-1][date];
-    }
-}
 
 </script>
 
